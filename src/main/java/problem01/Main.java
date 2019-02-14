@@ -21,6 +21,26 @@ public class Main {
 	}
 	
 	public static int countClap(int number) {
-		return 0;
+		
+		int[] Arr = {3, 6, 9}; 
+		int Cnt = 0; 
+	
+		do { 
+		
+		int lastNum = number % 10; 
+		
+			for (int i = 0; i < Arr.length; i++) { 
+					if (lastNum == Arr[i]) { 
+		 					Cnt++; 
+		 					break; 
+		 			} 
+		 		} 
+		 	
+		 			number = number / 10; 
+		 
+		 	} while (number > 0); 
+		 
+		 	return Cnt; 
+		 	 
 	}
 }
